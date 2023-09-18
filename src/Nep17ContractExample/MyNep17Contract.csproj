@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="nccs &quot;$(MSBuildProjectFile)&quot;" />
+    <Exec Command="dotnet nccs &quot;$(MSBuildProjectFile)&quot;" />
   </Target>
 
 </Project>
