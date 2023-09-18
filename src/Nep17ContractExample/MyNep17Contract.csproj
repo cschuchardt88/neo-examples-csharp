@@ -13,4 +13,8 @@
     <PackageReference Include="Neo.SmartContract.Framework" Version="3.5.0" />
   </ItemGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="nccs &quot;$(MSBuildProjectFile)&quot;" />
+  </Target>
+
 </Project>
