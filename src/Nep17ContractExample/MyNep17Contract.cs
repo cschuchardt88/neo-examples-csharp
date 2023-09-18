@@ -1,11 +1,12 @@
-using System;
-using System.ComponentModel;
-using System.Numerics;
-
 using Neo.SmartContract.Framework;
 using Neo.SmartContract.Framework.Attributes;
 using Neo.SmartContract.Framework.Native;
 using Neo.SmartContract.Framework.Services;
+
+using System;
+using System.ComponentModel;
+using System.Numerics;
+
 
 namespace Neo.SmartContract.Examples
 {
@@ -14,7 +15,7 @@ namespace Neo.SmartContract.Examples
     [ManifestExtra("Description", "NEP-17 Example")]
     [ManifestExtra("Email", "examples@neo.events")]
     [ManifestExtra("Website", "https://www.neo.events/")]
-    [ContractSourceCode("https://github.com/cschuchardt88/neo-examples-csharp")]
+    [ContractSourceCode("https://github.com/cschuchardt88/neo-examples-csharp/blob/master/src/Nep17ContractExample/MyNep17Contract.cs")]
     [SupportedStandards("NEP-17")]
     [ContractPermission("*", "onNEP17Payment")]
     public class MyNep17Contract : Nep17Token
@@ -41,8 +42,8 @@ namespace Neo.SmartContract.Examples
 
         #region Owner
 
-        // Replace with "NYR24RaAhcqpCtHu6keHXRtYjnV6pWEc3K" with your own address.
-        [InitialValue("NYR24RaAhcqpCtHu6keHXRtYjnV6pWEc3K", ContractParameterType.Hash160)]
+        // Replace with "NWLA1iinq7mVYKpV5dYxMjsagZXsnWsyYV" with your own address.
+        [InitialValue("NWLA1iinq7mVYKpV5dYxMjsagZXsnWsyYV", ContractParameterType.Hash160)]
         private static readonly UInt160 Owner = default;
 
         [Safe]
@@ -59,7 +60,8 @@ namespace Neo.SmartContract.Examples
 
         public static void SetOwner(UInt160 account)
         {
-            if (IsOwner() == false) throw new InvalidOperationException("No Authorization!");
+            if (IsOwner() == false)
+                throw new InvalidOperationException("No Authorization!");
             if (account != null && account.IsValid)
             {
                 ContractMap[OwnerKey] = account;
@@ -77,14 +79,14 @@ namespace Neo.SmartContract.Examples
             var iter = MinterMap.Find(options: FindOptions.KeysOnly | FindOptions.RemovePrefix);
             List<UInt160> minters = new();
             while (iter.Next())
-                minters.Add(iter.Value as UInt160);
+                minters.Add((UInt160)iter.Value);
             return minters;
         }
 
         private static bool IsMinter()
         {
-            var tx = Runtime.ScriptContainer as Transaction;
-            return (Runtime.CheckWitness(tx.Sender) && MinterMap[tx.Sender] != null);
+            var tx = (Transaction)Runtime.ScriptContainer;
+            return Runtime.CheckWitness(tx.Sender) && MinterMap[tx.Sender] != null;
         }
 
         public delegate void OnSetMinterDelegate(UInt160 account, bool canMint);
@@ -94,8 +96,9 @@ namespace Neo.SmartContract.Examples
 
         public static void SetMinter(UInt160 account, bool canMint)
         {
-            if (IsOwner() == false) throw new InvalidOperationException("No Authorization!");
-            MinterMap.Put(account, canMint ? "\x01" : null);
+            if (IsOwner() == false)
+                throw new InvalidOperationException("No Authorization!");
+            MinterMap[account] = canMint ? "\x01" : null;
             OnSetMinter(account, canMint);
         }
 
@@ -111,13 +114,15 @@ namespace Neo.SmartContract.Examples
 
         public static new void Mint(UInt160 account, BigInteger amount)
         {
-            if (IsOwner() == false || IsMinter() == false) throw new InvalidOperationException("No Authorization!");
+            if (IsOwner() == false || IsMinter() == false)
+                throw new InvalidOperationException("No Authorization!");
             Nep17Token.Mint(account, amount);
         }
 
         public static new void Burn(UInt160 account, BigInteger amount)
         {
-            if (IsOwner() == false || IsMinter() == false) throw new InvalidOperationException("No Authorization!");
+            if (IsOwner() == false || IsMinter() == false)
+                throw new InvalidOperationException("No Authorization!");
             Nep17Token.Burn(account, amount);
         }
 
@@ -131,21 +136,24 @@ namespace Neo.SmartContract.Examples
 
         public static void _deploy(object data, bool update)
         {
-            if (update) return;
+            if (update)
+                return;
             ContractMap[OwnerKey] = Owner;
             Nep17Token.Mint(Owner, 100000000 * BigInteger.Pow(10, Factor()));
         }
 
         public static bool Update(ByteString nefFile, string manifest)
         {
-            if (IsOwner() == false) throw new InvalidOperationException("No Authorization!");
+            if (IsOwner() == false)
+                throw new InvalidOperationException("No Authorization!");
             ContractManagement.Update(nefFile, manifest);
             return true;
         }
 
-        public static bool Destory()
+        public static bool Destroy()
         {
-            if (IsOwner() == false) throw new InvalidOperationException("No Authorization!");
+            if (IsOwner() == false)
+                throw new InvalidOperationException("No Authorization!");
             ContractManagement.Destroy();
             return true;
         }
