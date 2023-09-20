@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyNep17Contract", "src\Nep17ContractExample\MyNep17Contract.csproj", "{CE78F9D6-6508-4AEA-81AB-541CF28EA31E}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CallContract", "src\CallContract\CallContract.csproj", "{524656D5-AC32-4B0E-B865-C05BDBD85C64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{CE78F9D6-6508-4AEA-81AB-541CF28EA31E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE78F9D6-6508-4AEA-81AB-541CF28EA31E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE78F9D6-6508-4AEA-81AB-541CF28EA31E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{524656D5-AC32-4B0E-B865-C05BDBD85C64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{524656D5-AC32-4B0E-B865-C05BDBD85C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{524656D5-AC32-4B0E-B865-C05BDBD85C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{524656D5-AC32-4B0E-B865-C05BDBD85C64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
