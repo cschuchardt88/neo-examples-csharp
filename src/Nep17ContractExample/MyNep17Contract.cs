@@ -15,9 +15,10 @@ namespace Neo.SmartContract.Examples
     [ManifestExtra("Description", "NEP-17 Example")]
     [ManifestExtra("Email", "examples@neo.events")]
     [ManifestExtra("Website", "https://www.neo.events/")]
-    [ContractSourceCode("https://github.com/cschuchardt88/neo-examples-csharp/blob/master/src/Nep17ContractExample/MyNep17Contract.cs")]
+    [ContractSourceCode("https://github.com/cschuchardt88/neo-examples-csharp")]
     [SupportedStandards("NEP-17")]
     [ContractPermission("*", "onNEP17Payment")]
+    [ContractPermission("0x979be391a0253d2e2fc611d84801a3ceedbd87f9", "*")]
     public class MyNep17Contract : Nep17Token
     {
         #region Prefixes
@@ -114,14 +115,14 @@ namespace Neo.SmartContract.Examples
 
         public static new void Mint(UInt160 account, BigInteger amount)
         {
-            if (IsOwner() == false || IsMinter() == false)
+            if (IsMinter() == false && IsOwner() == false)
                 throw new InvalidOperationException("No Authorization!");
             Nep17Token.Mint(account, amount);
         }
 
         public static new void Burn(UInt160 account, BigInteger amount)
         {
-            if (IsOwner() == false || IsMinter() == false)
+            if (IsOwner() == false && IsMinter() == false)
                 throw new InvalidOperationException("No Authorization!");
             Nep17Token.Burn(account, amount);
         }
@@ -130,8 +131,10 @@ namespace Neo.SmartContract.Examples
 
         #region Basic
 
+        [Safe]
         public static byte Factor() => 8; // This is an exponent (how many decimals places)
 
+        [Safe]
         public static bool Verify() => IsOwner();
 
         public static void _deploy(object data, bool update)
