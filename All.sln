@@ -7,6 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyNep17Contract", "src\Nep1
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CallContract", "src\CallContract\CallContract.csproj", "{524656D5-AC32-4B0E-B865-C05BDBD85C64}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorldContract", "src\HelloWorldContract\HelloWorldContract.csproj", "{68AAD13E-5FFC-4CF4-83A9-2C36E81F7D53}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{D23AC634-A280-42B5-97CB-D3A1D11E6838}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Smart Contracts", "Smart Contracts", "{C1A38CEB-8467-4E43-98F2-5BD10765C30F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,9 +30,18 @@ Global
 		{524656D5-AC32-4B0E-B865-C05BDBD85C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{524656D5-AC32-4B0E-B865-C05BDBD85C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{524656D5-AC32-4B0E-B865-C05BDBD85C64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68AAD13E-5FFC-4CF4-83A9-2C36E81F7D53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68AAD13E-5FFC-4CF4-83A9-2C36E81F7D53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68AAD13E-5FFC-4CF4-83A9-2C36E81F7D53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68AAD13E-5FFC-4CF4-83A9-2C36E81F7D53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CE78F9D6-6508-4AEA-81AB-541CF28EA31E} = {C1A38CEB-8467-4E43-98F2-5BD10765C30F}
+		{524656D5-AC32-4B0E-B865-C05BDBD85C64} = {C1A38CEB-8467-4E43-98F2-5BD10765C30F}
+		{68AAD13E-5FFC-4CF4-83A9-2C36E81F7D53} = {C1A38CEB-8467-4E43-98F2-5BD10765C30F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FA269E85-FDEB-4B95-A5EF-F4CBA5631BF1}
