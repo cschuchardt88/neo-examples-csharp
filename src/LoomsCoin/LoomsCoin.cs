@@ -136,7 +136,7 @@ public class LoomsCoin : Nep17Token
             throw new InvalidOperationException("No Authorization!");
         if (amount <= 0)
             return false;
-        return GAS.Transfer(Runtime.CallingScriptHash, to, amount);
+        return GAS.Transfer(Runtime.ExecutingScriptHash, to, amount);
     }
 
     public static void OnNEP17Payment(UInt160 from, BigInteger amount, object data)
