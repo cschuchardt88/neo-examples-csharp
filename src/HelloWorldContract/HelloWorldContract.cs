@@ -7,7 +7,6 @@
 using Neo.SmartContract.Framework;
 using Neo.SmartContract.Framework.Attributes;
 using Neo.SmartContract.Framework.Native;
-
 using System.ComponentModel;
 
 namespace HelloWorldContract;
@@ -17,13 +16,14 @@ namespace HelloWorldContract;
 [ManifestExtra("Description", "Simple Smart Contract Example")]
 [ManifestExtra("Email", "examples@neo.events")]
 [ManifestExtra("Website", "https://www.neo.events/")]
+[ManifestExtra("Version", "1.0.0")]
 [ContractSourceCode("https://github.com/cschuchardt88/neo-examples-csharp")]
 public class HelloWorldContract : SmartContract
 {
     [Safe]
     public static string SayHello(string name)
     {
-        return $"Hello, {name}";
+        return "Hello, " + name;
     }
 
     public static void _deploy(object data, bool update)

@@ -6,20 +6,25 @@
 
 using Neo.SmartContract.Framework;
 using Neo.SmartContract.Framework.Attributes;
+using Neo.SmartContract.Framework.Services;
 using System.ComponentModel;
 
-namespace CallContracts;
+namespace CallContract;
 
 [DisplayName("MyBasicContract")]
 [ManifestExtra("Author", "neo.events")]
 [ManifestExtra("Description", "How to Call a Contract")]
 [ManifestExtra("Email", "examples@neo.events")]
 [ManifestExtra("Website", "https://www.neo.events/")]
+[ManifestExtra("Version", "1.0.0")]
 [ContractSourceCode("https://github.com/cschuchardt88/neo-examples-csharp")]
 public class CallContract : SmartContract
 {
     public static void Main()
     {
-        HelloWorldContract.SayHello("Bob");
+        HelloWorldContract.SayHello(Runtime.CallingScriptHash);
+
+        var balance = LoomsCoin.BalanceOf(Runtime.CallingScriptHash);
+        Runtime.Log(Runtime.CallingScriptHash + " balance is " + balance);
     }
 }
