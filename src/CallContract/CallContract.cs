@@ -18,6 +18,7 @@ namespace CallContract;
 [ManifestExtra("Website", "https://www.neo.events/")]
 [ManifestExtra("Version", "1.0.0")]
 [ContractSourceCode("https://github.com/cschuchardt88/neo-examples-csharp")]
+[ContractPermission("*", "*")]
 public class CallContract : SmartContract
 {
     public static void Main()

@@ -30,7 +30,7 @@ public class LoomsCoin : Nep17Token
 
     private const byte Prefix_Owner = 0x02;
 
-    [InitialValue("NgiALPHzer4fMTBdkMvNVwHA4ApA5dp666", Neo.SmartContract.ContractParameterType.Hash160)]
+    [InitialValue("NVg7LjGcUSrgxgjX3zEgqaksfMaiS8Z6e1", Neo.SmartContract.ContractParameterType.Hash160)]
     private static readonly UInt160 InitialOwner = default;
 
     [Safe]
@@ -69,7 +69,7 @@ public class LoomsCoin : Nep17Token
 
     private const byte Prefix_Minter = 0x03;
 
-    [InitialValue("NgiALPHzer4fMTBdkMvNVwHA4ApA5dp666", Neo.SmartContract.ContractParameterType.Hash160)]
+    [InitialValue("NVg7LjGcUSrgxgjX3zEgqaksfMaiS8Z6e1", Neo.SmartContract.ContractParameterType.Hash160)]
     private static readonly UInt160 InitialMinter = default;
 
     [Safe]
