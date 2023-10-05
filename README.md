@@ -5,6 +5,17 @@ Neo N3 blockchain C# examples. Including node plugins, RPC client and smart cont
 - Dotnet 7.0+
 - Visual Studio 2022 Version 17.7.4
 
+# What's to come
+- [ ] Tutorials on Plugins, RpcClient and Smart Contracts
+- [ ] `neo-cli` node Plugin examples
+- [ ] `RpcClient` examples
+- [ ] Nep-11 smart contract example
+- [x] Nep-17 smart contract example
+- [x] Emit events example (smart contract)
+- [x] Smart contract basic storage example
+- [x] Calling smart contract example
+- [x] Test smart contract example
+
 # Build
 **In a `Terminal` type:**
 ```
@@ -20,3 +31,4 @@ tux@PC01:~/Downloads/neo-examples-csharp$ dotnet build All.sln
 - [Using Storage and StorageMaps (Beginner)](/src/StorageContract/StorageContract.cs)
 - [Calling deployed contracts (Beginner/Advanced)](/src/CallContract)
 - [NEP-17 (Beginner/Advanced)](/src/ExampleCoin/ExampleCoin.cs)
+- [Build Smart Contract Tests](/tests/Contract.Tests)
