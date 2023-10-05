@@ -143,8 +143,6 @@ public class LoomsCoin : Nep17Token
     {
         if (Runtime.CallingScriptHash == GAS.Hash && amount > 0)
             Nep17Token.Mint(from, amount);
-        else if (Runtime.CallingScriptHash == Runtime.ExecutingScriptHash && amount > 0)
-            Burn(from, amount);
     }
 
     #endregion
