@@ -29,11 +29,11 @@ public class UT_HelloWorldContract : IClassFixture<CheckpointFixture<UT_HelloWor
     public void Test_SayHello()
     {
         var settings = _expressChain.GetProtocolSettings();
-        var aliceAccount = _expressChain.GetDefaultAccount("alice");
+        var aliceScriptHash = _expressChain.GetDefaultAccountScriptHash("alice");
 
         using var snapshot = _checkpointFixture.GetSnapshot();
 
-        using var engine = new TestApplicationEngine(snapshot, settings, aliceAccount.ToScriptHash(settings.AddressVersion));
+        using var engine = new TestApplicationEngine(snapshot, settings, aliceScriptHash);
 
         var vmStateResult = engine.ExecuteScript<IHelloWorldContract>(e => e.sayHello("alice"));
 
@@ -41,6 +41,9 @@ public class UT_HelloWorldContract : IClassFixture<CheckpointFixture<UT_HelloWor
 
         Assert.Equal(VMState.HALT, vmStateResult);
         Assert.Equal(VMState.HALT, engine.State);
+
+        Assert.NotNull(result);
+        Assert.False(result.IsNull);
         Assert.Equal("Hello, alice", result.GetString());
     }
 }

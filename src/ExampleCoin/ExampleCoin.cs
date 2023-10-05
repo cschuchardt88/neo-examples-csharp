@@ -30,7 +30,7 @@ public class ExampleCoin : Nep17Token
 
     private const byte Prefix_Owner = 0x02;
 
-    [InitialValue("NVg7LjGcUSrgxgjX3zEgqaksfMaiS8Z6e1", Neo.SmartContract.ContractParameterType.Hash160)]
+    [InitialValue("NUuJw4C4XJFzxAvSZnFTfsNoWZytmQKXQP", Neo.SmartContract.ContractParameterType.Hash160)]
     private static readonly UInt160 InitialOwner = default;
 
     [Safe]
@@ -69,7 +69,7 @@ public class ExampleCoin : Nep17Token
 
     private const byte Prefix_Minter = 0x03;
 
-    [InitialValue("NVg7LjGcUSrgxgjX3zEgqaksfMaiS8Z6e1", Neo.SmartContract.ContractParameterType.Hash160)]
+    [InitialValue("NUuJw4C4XJFzxAvSZnFTfsNoWZytmQKXQP", Neo.SmartContract.ContractParameterType.Hash160)]
     private static readonly UInt160 InitialMinter = default;
 
     [Safe]

@@ -29,11 +29,11 @@ public class UT_EventContract : IClassFixture<CheckpointFixture<UT_EventContract
     public void Test_Main()
     {
         var settings = _expressChain.GetProtocolSettings();
-        var aliceAccount = _expressChain.GetDefaultAccount("alice");
+        var aliceScriptHash = _expressChain.GetDefaultAccountScriptHash("alice");
 
         using var snapshot = _checkpointFixture.GetSnapshot();
 
-        using var engine = new TestApplicationEngine(snapshot, settings, aliceAccount.ToScriptHash(settings.AddressVersion));
+        using var engine = new TestApplicationEngine(snapshot, settings, aliceScriptHash);
 
         var vmStateResult = engine.ExecuteScript<IEventContract>(e => e.main());
 

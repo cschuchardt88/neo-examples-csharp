@@ -25,7 +25,7 @@ public class CallContract : SmartContract
     {
         HelloWorldContract.SayHello(Runtime.CallingScriptHash);
 
-        var balance = LoomsCoin.BalanceOf(Runtime.CallingScriptHash);
+        var balance = ExampleCoin.BalanceOf(Runtime.CallingScriptHash);
         Runtime.Log(Runtime.CallingScriptHash + " balance is " + balance);
     }
 }
