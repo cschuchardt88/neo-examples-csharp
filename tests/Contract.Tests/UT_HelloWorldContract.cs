@@ -34,7 +34,7 @@ public class UT_HelloWorldContract : IClassFixture<CheckpointFixture<UT_HelloWor
 
         using var engine = new TestApplicationEngine(snapshot, settings, aliceAccount.ToScriptHash(settings.AddressVersion));
 
-        var vmState = engine.ExecuteScript<HelloWorldContract>(e => e.sayHello("alice"));
+        var vmState = engine.ExecuteScript<IHelloWorldContract>(e => e.sayHello("alice"));
 
         Assert.Equal(VMState.HALT, vmState);
     }

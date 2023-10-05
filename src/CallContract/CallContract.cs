@@ -11,7 +11,7 @@ using System.ComponentModel;
 
 namespace CallContract;
 
-[DisplayName("MyBasicContract")]
+[DisplayName("CallContract")]
 [ManifestExtra("Author", "neo.events")]
 [ManifestExtra("Description", "How to Call a Contract")]
 [ManifestExtra("Email", "examples@neo.events")]
