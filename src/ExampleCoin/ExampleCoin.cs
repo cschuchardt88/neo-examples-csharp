@@ -13,9 +13,9 @@ using System;
 using System.ComponentModel;
 using System.Numerics;
 
-namespace LoomsCoin;
+namespace ExampleCoin;
 
-[DisplayName("LoomsCoin")]
+[DisplayName("ExampleCoin")]
 [ManifestExtra("Author", "neo.events")]
 [ManifestExtra("Description", "Simple Smart Contract Example")]
 [ManifestExtra("Email", "examples@neo.events")]
@@ -24,7 +24,7 @@ namespace LoomsCoin;
 [ContractSourceCode("https://github.com/cschuchardt88/neo-examples-csharp")]
 [SupportedStandards("NEP-17")]
 [ContractPermission("*", "*")]
-public class LoomsCoin : Nep17Token
+public class ExampleCoin : Nep17Token
 {
     #region Owner
 
@@ -117,7 +117,7 @@ public class LoomsCoin : Nep17Token
     public override byte Decimals() => 8;
 
     [Safe]
-    public override string Symbol() => "LOOMS";
+    public override string Symbol() => "EXAMPLE";
 
     public static new void Burn(UInt160 account, BigInteger amount)
     {
