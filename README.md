@@ -1,9 +1,17 @@
 # neo-examples-csharp
-Neo N3 blockchain C# examples. Including node plugins, RPC client and smart contracts.
+Neo N3 blockchain C# examples. Including neo-cli plugins, RPC client and smart contracts.
 
 # Requirements
-- Dotnet 7.0+
-- Visual Studio 2022 Version 17.7.4
+- Dotnet 7.0
+- Visual Studio 2022
+
+# Implements (In Examples)
+- [neo 3.6.0](https://github.com/neo-project/neo/releases/tag/v3.6.0)
+- [neo-node 3.6.0](https://github.com/neo-project/neo-node/releases/tag/v3.6.0)
+- [RpcClient 3.6.1](https://github.com/neo-project/neo-modules/releases/tag/v3.6.1)
+- [neo-devpack-dotnet 3.6.0](https://github.com/neo-project/neo-devpack-dotnet/releases/tag/v3.6.0)
+- [neo-test 3.5.17](https://github.com/N3developertoolkit/neo-test/releases/tag/3.5.17)
+- [neo-express 3.5.20](https://github.com/neo-project/neo-express/releases/tag/3.5.20)
 
 # What's to come
 - [ ] Tutorials on Plugins, RpcClient and Smart Contracts
