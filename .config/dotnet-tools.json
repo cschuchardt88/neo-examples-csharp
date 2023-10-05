@@ -7,6 +7,12 @@
       "commands": [
         "nccs"
       ]
+    },
+    "neo.express": {
+      "version": "3.5.20",
+      "commands": [
+        "neoxp"
+      ]
     }
   }
 }

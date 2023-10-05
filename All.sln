@@ -20,6 +20,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageContract", "src\Stor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExampleCoin", "src\ExampleCoin\ExampleCoin.csproj", "{9B8B3FBF-AABA-4E54-84A4-FBDA7F718218}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D701F95C-3C2F-4EAB-BDD5-255A29D3C558}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contract.Tests", "tests\Contract.Tests\Contract.Tests.csproj", "{469C4094-E7F6-4344-9FFC-BDAE1838221A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +50,10 @@ Global
 		{9B8B3FBF-AABA-4E54-84A4-FBDA7F718218}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B8B3FBF-AABA-4E54-84A4-FBDA7F718218}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B8B3FBF-AABA-4E54-84A4-FBDA7F718218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{469C4094-E7F6-4344-9FFC-BDAE1838221A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{469C4094-E7F6-4344-9FFC-BDAE1838221A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{469C4094-E7F6-4344-9FFC-BDAE1838221A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{469C4094-E7F6-4344-9FFC-BDAE1838221A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +64,7 @@ Global
 		{6616A88E-910A-49DE-8820-91AB956F464B} = {C1A38CEB-8467-4E43-98F2-5BD10765C30F}
 		{E829419A-7A49-4309-AD48-39F3CB5D1857} = {C1A38CEB-8467-4E43-98F2-5BD10765C30F}
 		{9B8B3FBF-AABA-4E54-84A4-FBDA7F718218} = {C1A38CEB-8467-4E43-98F2-5BD10765C30F}
+		{469C4094-E7F6-4344-9FFC-BDAE1838221A} = {D701F95C-3C2F-4EAB-BDD5-255A29D3C558}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FA269E85-FDEB-4B95-A5EF-F4CBA5631BF1}
