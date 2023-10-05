@@ -4,7 +4,6 @@
 // MIT software license, see the accompanying file LICENSE in
 // the main directory of the project for more details.
 
-using Neo;
 using Neo.SmartContract.Framework;
 using Neo.SmartContract.Framework.Attributes;
 using Neo.SmartContract.Framework.Services;
@@ -23,20 +22,20 @@ namespace EventContract;
 [ContractPermission("*", "*")]
 public class EventContract : SmartContract
 {
-    public delegate void OnSayHelloDelegate(UInt160 address);
+    public delegate void OnSayHelloDelegate(string message);
 
-    [DisplayName("SayHello")]
+    [DisplayName("SayHello1")]
     public static event OnSayHelloDelegate OnSayHello;
 
-    [DisplayName("SayHelloAgain")]
-    public static event Action<UInt160> SayHello;
+    [DisplayName("SayHello2")]
+    public static event Action<string> SayHello;
 
     public static void Main()
     {
-        OnSayHello(Runtime.CallingScriptHash);
+        OnSayHello("Hello, alice");
 
-        Runtime.Notify("SayHello", new[] { Runtime.CallingScriptHash });
+        SayHello("Hello, bob");
 
-        SayHello(Runtime.CallingScriptHash);
+        Runtime.Notify("SayHello3", new[] { "Hello, joe" });
     }
 }

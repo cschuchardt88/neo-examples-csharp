@@ -8,13 +8,10 @@
 
 using System.ComponentModel;
 
-namespace Contract.Tests;
+namespace Contract.Tests.Contracts;
 
-[Description("HelloWorldContract")]
-internal interface IHelloWorldContract
+[Description("EventContract")]
+internal interface IEventContract
 {
-    string sayHello(string name);
-    void _deploy(object data, bool update);
-    bool update(byte[] nefFile, string manifest);
-    bool destroy();
+    void main();
 }
