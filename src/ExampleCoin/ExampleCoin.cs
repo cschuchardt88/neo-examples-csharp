@@ -104,7 +104,7 @@ public class ExampleCoin : Nep17Token
 
     public static new void Mint(UInt160 to, BigInteger amount)
     {
-        if (IsOwner() == false || IsMinter() == false)
+        if (IsOwner() == false && IsMinter() == false)
             throw new InvalidOperationException("No Authorization!");
         Nep17Token.Mint(to, amount);
     }
@@ -121,7 +121,7 @@ public class ExampleCoin : Nep17Token
 
     public static new void Burn(UInt160 account, BigInteger amount)
     {
-        if (IsOwner() == false || IsMinter() == false)
+        if (IsOwner() == false && IsMinter() == false)
             throw new InvalidOperationException("No Authorization!");
         Nep17Token.Burn(account, amount);
     }
