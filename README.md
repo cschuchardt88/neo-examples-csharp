@@ -48,7 +48,7 @@ as well. See list _below_ for which templates we offer. More to come...
 
 ## Templates
 - [Blank Smart Contract](/templates/Contracts/BlankContract)
-- [Start Nep-17 Contract](/templates/Contracts/BlankNep17Token)
+- [Nep-17 Contract](/templates/Contracts/BlankNep17Token)
 
 ## Build a Template
 **Note**: Make sure to replace `$templateName.csproj` with your project file name.
