@@ -24,7 +24,7 @@ Neo N3 blockchain C# examples. Including neo-cli plugins, RPC client and smart c
 - [x] Test smart contract example
 
 # Smart Contract Examples
-- [Contract Start (Beginner)](/src/HelloWorldContract/HelloWorldContract.cs)
+- [Basic Contract (Beginner)](/src/HelloWorldContract/HelloWorldContract.cs)
 - [Emit Events (Beginner)](/src/EventContract/EventContract.cs)
 - [Using Storage and StorageMaps (Beginner)](/src/StorageContract/StorageContract.cs)
 - [Calling deployed contracts (Beginner/Advanced)](/src/CallContract)
