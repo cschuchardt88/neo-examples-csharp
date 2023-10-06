@@ -44,7 +44,8 @@ tux@PC01:~/Downloads/neo-examples-csharp$ dotnet build All.sln
 All you have to do is go to the [templates](/templates/Contracts/) directory and copy the
 template folder to a location of your choice. After all is said and done. You can
 rename the `*.csproj` file to a more suitable name. Along with any `*.cs` files
-as well. See list _below_ for which templates we offer. More to come...
+as well. See list _below_ for which templates we offer. Be sure to follow any `TODOS`
+comments. More to come...
 
 ## Templates
 - [Blank Smart Contract](/templates/Contracts/BlankContract)
