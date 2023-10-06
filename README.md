@@ -24,7 +24,7 @@ Neo N3 blockchain C# examples. Including neo-cli plugins, RPC client and smart c
 - [x] Test smart contract example
 
 # Smart Contract Examples
-- [Contract Start (Beginner)](/src/HelloWorldContract/HelloWorldContract.cs)
+- [Basic Contract (Beginner)](/src/HelloWorldContract/HelloWorldContract.cs)
 - [Emit Events (Beginner)](/src/EventContract/EventContract.cs)
 - [Using Storage and StorageMaps (Beginner)](/src/StorageContract/StorageContract.cs)
 - [Calling deployed contracts (Beginner/Advanced)](/src/CallContract)
@@ -36,7 +36,7 @@ Neo N3 blockchain C# examples. Including neo-cli plugins, RPC client and smart c
 ```
 tux@PC01:~/Downloads$ git clone https://github.com/cschuchardt88/neo-examples-csharp.git
 tux@PC01:~/Downloads$ cd neo-examples-csharp
-tux@PC01:~/Downloads$ dotnet tool restore
+tux@PC01:~/Downloads/neo-examples-csharp$ dotnet tool restore
 tux@PC01:~/Downloads/neo-examples-csharp$ dotnet build All.sln
 ```
 
@@ -44,7 +44,8 @@ tux@PC01:~/Downloads/neo-examples-csharp$ dotnet build All.sln
 All you have to do is go to the [templates](/templates/Contracts/) directory and copy the
 template folder to a location of your choice. After all is said and done. You can
 rename the `*.csproj` file to a more suitable name. Along with any `*.cs` files
-as well. See list _below_ for which templates we offer. More to come...
+as well. See list _below_ for which templates we offer. Be sure to follow any `TODO`
+comments. More to come...
 
 ## Templates
 - [Blank Smart Contract](/templates/Contracts/BlankContract)
