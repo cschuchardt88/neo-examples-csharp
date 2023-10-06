@@ -1,7 +1,7 @@
 # neo-examples-csharp
 Neo N3 blockchain C# examples. Including neo-cli plugins, RPC client and smart contracts.
 
-# Requirements
+## Requirements
 - Dotnet 7.0
 - Visual Studio 2022
 
@@ -24,7 +24,15 @@ Neo N3 blockchain C# examples. Including neo-cli plugins, RPC client and smart c
 - [x] Calling smart contract example
 - [x] Test smart contract example
 
-# Build
+# Smart Contract Examples
+- [Contract Start (Beginner)](/src/HelloWorldContract/HelloWorldContract.cs)
+- [Emit Events (Beginner)](/src/EventContract/EventContract.cs)
+- [Using Storage and StorageMaps (Beginner)](/src/StorageContract/StorageContract.cs)
+- [Calling deployed contracts (Beginner/Advanced)](/src/CallContract)
+- [NEP-17 (Beginner/Advanced)](/src/ExampleCoin/ExampleCoin.cs)
+- [Build Smart Contract Tests](/tests/Contract.Tests)
+
+# Build Repository
 **In a `Terminal` type:**
 ```
 tux@PC01:~/Downloads$ git clone https://github.com/cschuchardt88/neo-examples-csharp.git
@@ -33,11 +41,21 @@ tux@PC01:~/Downloads$ dotnet tool restore
 tux@PC01:~/Downloads/neo-examples-csharp$ dotnet build All.sln
 ```
 
+# How to Use Templates
+All you have to do is go to the [templates](/templates/Contracts/) directory and copy the
+template folder to a location of your choice. After all is said and done. You can
+rename the `*.csproj` file to a more suitable name. Along with any `*.cs` files
+as well. See list _below_ for which templates we offer. More to come...
 
-# Smart Contract Examples
-- [Contract Start (Beginner)](/src/HelloWorldContract/HelloWorldContract.cs)
-- [Emit Events (Beginner)](/src/EventContract/EventContract.cs)
-- [Using Storage and StorageMaps (Beginner)](/src/StorageContract/StorageContract.cs)
-- [Calling deployed contracts (Beginner/Advanced)](/src/CallContract)
-- [NEP-17 (Beginner/Advanced)](/src/ExampleCoin/ExampleCoin.cs)
-- [Build Smart Contract Tests](/tests/Contract.Tests)
+## Templates
+- [Blank Smart Contract](/templates/Contracts/BlankContract)
+- [Start Nep-17 Contract](/templates/Contracts/BlankNep17Token)
+
+## Build a Template
+**Note**: Make sure to replace `$templateName.csproj` with your project file name.
+
+**In a `Terminal` type:**
+```
+tux@PC01:~/templates$ dotnet tool restore
+tux@PC01:~/templates$ dotnet build $templateName.csproj
+```
