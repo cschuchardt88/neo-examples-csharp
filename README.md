@@ -3,7 +3,6 @@ Neo N3 blockchain C# examples. Including neo-cli plugins, RPC client and smart c
 
 # Requirements
 - Dotnet 7.0
-- Visual Studio 2022
 
 # Implements (In Examples)
 - [neo 3.6.0](https://github.com/neo-project/neo/releases/tag/v3.6.0)
