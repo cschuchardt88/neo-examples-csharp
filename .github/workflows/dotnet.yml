@@ -6,8 +6,20 @@ name: .NET
 on:
   push:
     branches: [ "master" ]
+    paths-ignore:
+      - 'README.md'
+      - '.editorconfig'
+      - '.gitignore'
+      - 'LICENSE'
+      - 'docs/**'
   pull_request:
     branches: [ "master" ]
+    paths-ignore:
+      - 'README.md'
+      - '.editorconfig'
+      - '.gitignore'
+      - 'LICENSE'
+      - 'docs/**'
 
 env:
     DOTNET_VERSION: 7.0.x
