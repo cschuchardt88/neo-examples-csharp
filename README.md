@@ -29,6 +29,7 @@ Neo N3 blockchain C# examples. Including neo-cli plugins, RPC client and smart c
 ```
 tux@PC01:~/Downloads$ git clone https://github.com/cschuchardt88/neo-examples-csharp.git
 tux@PC01:~/Downloads$ cd neo-examples-csharp
+tux@PC01:~/Downloads$ dotnet tool restore
 tux@PC01:~/Downloads/neo-examples-csharp$ dotnet build All.sln
 ```
 
