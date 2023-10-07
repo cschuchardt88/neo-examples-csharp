@@ -35,7 +35,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlankContract", "templates\Contracts\BlankContract\BlankContract.csproj", "{B0F6F9AF-8E3A-4D36-96C1-EC29991FE826}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlankNep17Token", "templates\Contracts\BlankNep17Token\BlankNep17Token.csproj", "{A9006243-B88F-49F7-A870-654127E7E73E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlankNep17Token", "templates\Contracts\BlankNep17Token\BlankNep17Token.csproj", "{A9006243-B88F-49F7-A870-654127E7E73E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OracleContract", "src\OracleContract\OracleContract.csproj", "{02F0FF7C-96DA-4F27-8573-61CD33291000}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{A9006243-B88F-49F7-A870-654127E7E73E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9006243-B88F-49F7-A870-654127E7E73E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9006243-B88F-49F7-A870-654127E7E73E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02F0FF7C-96DA-4F27-8573-61CD33291000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02F0FF7C-96DA-4F27-8573-61CD33291000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02F0FF7C-96DA-4F27-8573-61CD33291000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02F0FF7C-96DA-4F27-8573-61CD33291000}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,6 +94,7 @@ Global
 		{469C4094-E7F6-4344-9FFC-BDAE1838221A} = {D701F95C-3C2F-4EAB-BDD5-255A29D3C558}
 		{B0F6F9AF-8E3A-4D36-96C1-EC29991FE826} = {68D91BC6-D776-4B81-AFA1-7E516EEEA1A2}
 		{A9006243-B88F-49F7-A870-654127E7E73E} = {68D91BC6-D776-4B81-AFA1-7E516EEEA1A2}
+		{02F0FF7C-96DA-4F27-8573-61CD33291000} = {C1A38CEB-8467-4E43-98F2-5BD10765C30F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FA269E85-FDEB-4B95-A5EF-F4CBA5631BF1}
