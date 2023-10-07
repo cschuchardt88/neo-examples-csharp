@@ -4,6 +4,7 @@
 // MIT software license, see the accompanying file LICENSE in
 // the main directory of the project for more details.
 
+using Neo;
 using Neo.SmartContract.Framework;
 using Neo.SmartContract.Framework.Attributes;
 using Neo.SmartContract.Framework.Services;
@@ -21,9 +22,14 @@ namespace CallContract;
 [ContractPermission("*", "*")]
 public class CallContract : SmartContract
 {
+    [InitialValue("NUuJw4C4XJFzxAvSZnFTfsNoWZytmQKXQP", Neo.SmartContract.ContractParameterType.Hash160)]
+    private static readonly UInt160 InitialScriptHash = default;
+
     public static void Main()
     {
         HelloWorldContract.SayHello(Runtime.CallingScriptHash);
+
+        Contract.Call(InitialScriptHash, "sayHello", CallFlags.All, Runtime.CallingScriptHash);
 
         var balance = ExampleCoin.BalanceOf(Runtime.CallingScriptHash);
         Runtime.Log(Runtime.CallingScriptHash + " balance is " + balance);
