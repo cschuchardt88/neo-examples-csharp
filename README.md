@@ -39,23 +39,3 @@ tux@PC01:~/Downloads$ cd neo-examples-csharp
 tux@PC01:~/Downloads/neo-examples-csharp$ dotnet tool restore
 tux@PC01:~/Downloads/neo-examples-csharp$ dotnet build All.sln
 ```
-
-# How to Use Templates
-All you have to do is go to the [templates](/templates/Contracts/) directory and copy the
-template folder to a location of your choice. After all is said and done. You can
-rename the `*.csproj` file to a more suitable name. Along with any `*.cs` files
-as well. See list _below_ for which templates we offer. Be sure to follow any `TODO`
-comments. More to come...
-
-## Templates
-- [Blank Smart Contract](/templates/Contracts/BlankContract)
-- [Nep-17 Contract](/templates/Contracts/BlankNep17Token)
-
-## Build a Template
-**Note**: Make sure to replace `$templateName.csproj` with your project file name.
-
-**In a `Terminal` type:**
-```
-tux@PC01:~/templates$ dotnet tool restore
-tux@PC01:~/templates$ dotnet build $templateName.csproj
-```

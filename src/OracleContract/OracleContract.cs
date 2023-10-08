@@ -47,7 +47,7 @@ public class OracleContract : SmartContract
             See JSONPath format at https://github.com/atifaziz/JSONPath
             JSONPath = "$.record.propertyName"
             ReturnValue = ["Hello World!"]
-            ReturnValueType = string[]
+            ReturnValueType = string array
         */
         var requestUrl = "https://api.jsonbin.io/v3/qs/6520ad3c12a5d3765988542a";
         Oracle.Request(requestUrl, "$.record.propertyName", "onOracleResponse", null, Oracle.MinimumResponseFee);
