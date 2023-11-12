@@ -47,6 +47,7 @@ public class ExampleCoin
 
     #region Minter
 
+    [Safe]
     public static extern UInt160 GetMinter();
 
     public static extern void SetMinter(UInt160 newMinter);

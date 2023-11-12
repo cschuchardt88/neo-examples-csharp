@@ -17,5 +17,6 @@ public class HelloWorldContract
     [ContractHash]
     public static extern UInt160 Hash { get; }
 
+    [Safe]
     public static extern string SayHello(string name);
 }
