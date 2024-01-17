@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contract.Tests", "tests\Con
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OracleContract", "src\OracleContract\OracleContract.csproj", "{02F0FF7C-96DA-4F27-8573-61CD33291000}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BannedSymbols", "src\BannedSymbols\BannedSymbols.csproj", "{39CD368F-9DC9-4534-B2B0-C339D44EC7F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{02F0FF7C-96DA-4F27-8573-61CD33291000}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02F0FF7C-96DA-4F27-8573-61CD33291000}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02F0FF7C-96DA-4F27-8573-61CD33291000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39CD368F-9DC9-4534-B2B0-C339D44EC7F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39CD368F-9DC9-4534-B2B0-C339D44EC7F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39CD368F-9DC9-4534-B2B0-C339D44EC7F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39CD368F-9DC9-4534-B2B0-C339D44EC7F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -79,6 +85,7 @@ Global
 		{9B8B3FBF-AABA-4E54-84A4-FBDA7F718218} = {C1A38CEB-8467-4E43-98F2-5BD10765C30F}
 		{469C4094-E7F6-4344-9FFC-BDAE1838221A} = {D701F95C-3C2F-4EAB-BDD5-255A29D3C558}
 		{02F0FF7C-96DA-4F27-8573-61CD33291000} = {C1A38CEB-8467-4E43-98F2-5BD10765C30F}
+		{39CD368F-9DC9-4534-B2B0-C339D44EC7F4} = {C1A38CEB-8467-4E43-98F2-5BD10765C30F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FA269E85-FDEB-4B95-A5EF-F4CBA5631BF1}

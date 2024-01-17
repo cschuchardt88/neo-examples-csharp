@@ -1,0 +1,10 @@
+M:System.String.ToString
+M:System.Int16.ToString
+M:System.Int32.ToString
+M:System.Int64.ToString
+T:System.Int128
+M:System.UInt16.ToString
+M:System.UInt32.ToString
+M:System.UInt64.ToString
+T:System.UInt128
+M:System.Boolean.ToString
